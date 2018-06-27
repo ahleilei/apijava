@@ -18,13 +18,28 @@ public class ArraysHelper {
      * @param a
      * 2018年1月23日 by ziqiang.zhang
      */
-    public static void sort(int[] a){
-       Arrays.sort(a); 
-    }
-    
-    public static void main(String[] args) {
-        
+    public static void sort(int[] a) {
+        //       Arrays.sort(a); 
+        int left = 0;
+        int right = a.length - 1;
 
+        for (int i = left, j = i; i < right; j = ++i) {
+            int ai = a[i + 1];
+            while (ai < a[j]) {
+                a[j + 1] = a[j];
+                if (j-- == left) {
+                    break;
+                }
+            }
+            a[j + 1] = ai;
+        }
+
+    }
+
+    public static void main(String[] args) {
+        int[] a = { 2, 1, 6, 4, 5, 3, 0 };
+        ArraysHelper.sort(a);
+        System.out.println(Arrays.toString(a));
     }
 
 }
