@@ -1,4 +1,4 @@
-package api.java.lang;
+package top.yning.java.lang;
 
 public class SystemUtil {
 

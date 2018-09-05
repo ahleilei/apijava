@@ -1,4 +1,4 @@
-package api.java.util;
+package top.yning.java.util;
 
 import java.util.Arrays;
 
